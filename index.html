@@ -5,23 +5,25 @@
         <title>Crevolution Robotics</title>
         <link rel="stylesheet" type="text/css" href="style.css"> 
 
-       <script type="text/javascript">
-           /* The following code is only needed for th eindex page header tag
-               as it sets up the image slide show. For any extra images added 
-               to the slide show you will need and another object and source line 
-               to the javascript array as well another else if to the javascript
-               on line ##
-           */
-            var slideimages = new Array() // create new array to preload images
-            slideimages[0] = new Image() // create new instance of image object
-            slideimages[0].src = "http://crevolutionrobotics.org/Pictures/Logos/FIRSTicon_RGB.jpg" // link to the image source
-            slideimages[1] = new Image()
-            slideimages[1].src = "http://crevolutionrobotics.org/Pictures/2015/ToteCastleTeamPicture.jpg"
-            slideimages[2] = new Image()
-            slideimages[2].src = "http://crevolutionrobotics.org/Pictures/2013/Car_Relay_Race.jpg"
-            slideimages[3] = new Image()
-            slideimages[3].src = "http://crevolutionrobotics.org/Pictures/PicturesPage/2011/5.jpg"   
-        </script>
+       <style type="text/css">
+            .flashclass{ /*sample CSS class added to image slideshow container*/
+              width: 200px; /*a width should be defined for transition to work*/
+              padding: 5px;
+            }
+            .flashclass img{
+              border-width: 0;
+            }
+          </style>
+
+          <script type="text/javascript" src="transitionshow.js">
+
+            /***********************************************
+        * Random Transitions Slideshow- by JavaScript Kit (www.javascriptkit.com)
+        * This notice must stay intact for usage
+        * Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+        ***********************************************/
+
+      </script>
     </head>
 
     <body>
@@ -101,39 +103,23 @@
             <div class="contentHeader">A FIRST Robotics Team!</div>
             <div id="slideshowContent">
                 <div id="slideShowImages">
-                <a href="javascript:slidelink()"><img src="http://crevolutionrobotics.org/Pictures/Logos/FIRSTicon_RGB.jpg" id="slide" width="384" height="296" alt="FIRST logo"/></a>                   
-                    <script type="text/javascript">
-                        //variable that will increment through the images
-                        var step = 0
-                        var whichimage = 0
-                        function slideit() {
-                            //if browser does not support the image object, exit.
-                            if (!document.images)
-                                return
-                            document.getElementById('slide').src = slideimages[step].src
-                            whichimage = step
-                            if (step < 3)
-                                step++
-                            else
-                                step = 0
-                            //call function "slideit()" every 4.7 seconds
-                            setTimeout("slideit()", 4700)
-                        }
-                        function slidelink() {
-                            // The slidelink() function is used to change the image link depending on which image is shown at the time 
-                            // each if statement corrosponds to the different images
-                            if (whichimage == 0)
-                                window.location = "http://www.firstinspires.org"
-                            else if (whichimage == 1)
-                                window.location = "http://crevolutionrobotics.org/members.html"
-                            else if (whichimage == 2)
-                                window.location = "http://crevolutionrobotics.org/community.html"
-                            else if (whichimage == 3)
-                                winodw.location = "http://crevolutionrobotics.org/pictures.html"
-                        }
-                        slideit()
-                    </script>
-                 </div>  
+                
+                   <script type="text/javascript">
+                    var flashyshow=new flashyslideshow({ //create instance of slideshow
+                      wrapperid: "myslideshow", //unique ID for this slideshow
+                      wrapperclass: "flashclass", //desired CSS class for this slideshow
+                      imagearray: [
+                        ["http://crevolutionrobotics.org/Pictures/Logos/FIRSTicon_RGB.jpg", "http://www.firstinspires.org/robotics/frc", "_new", "US FIRST FRC."],
+                        ["http://crevolutionrobotics.org/Pictures/2015/ToteCastleTeamPicture.jpg", "http://crevolutionrobotics.org/members.html", "_new", "2015 Tote Castle at the Centerline District"],
+                        ["http://crevolutionrobotics.org/Pictures/2013/Car_Relay_Race.jpg", "http://crevolutionrobotics.org/community.html", "", "More than just building robots"],
+                        ["http://crevolutionrobotics.org/Pictures/PicturesPage/2011/5.jpg", "http://crevolutionrobotics.org/pictures.html", "", "Team pictures"]
+                      ],
+                      pause: 2000, //pause between content change (millisec)
+                      transduration: 1000 //duration of transition (affects only IE users)
+                    })
+                  </script>
+
+                </div>  
             </div>               
         </div>
         <div id="GameOfTheYear">
