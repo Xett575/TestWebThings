@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Crevolution Robotics</title>
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+
+       <script type="text/javascript">
+           /* The following code is only needed for th eindex page header tag
+               as it sets up the image slide show. For any extra images added 
+               to the slide show you will need and another object and source line 
+               to the javascript array as well another else if to the javascript
+               on line ##
+           */
+            var slideimages = new Array() // create new array to preload images
+            slideimages[0] = new Image() // create new instance of image object
+            slideimages[0].src = "http://crevolutionrobotics.org/Pictures/Logos/FIRSTicon_RGB.jpg" // link to the image source
+            slideimages[1] = new Image()
+            slideimages[1].src = "http://crevolutionrobotics.org/Pictures/2015/ToteCastleTeamPicture.jpg"
+            slideimages[2] = new Image()
+            slideimages[2].src = "http://crevolutionrobotics.org/Pictures/2013/Car_Relay_Race.jpg"
+            slideimages[3] = new Image()
+            slideimages[3].src = "http://crevolutionrobotics.org/Pictures/PicturesPage/2011/5.jpg"   
+        </script>
+    </head>
+
+    <body>
+       <div id="header">
+           <script>
+            /*  Below is the javascript for the dropdown menu
+                When the user clicks on the button, 
+                toggle between hiding and showing the dropdown content */
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+                }
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+            </script>
+            <div id="navBar">
+                <div class="dropdown">
+                <button onclick="location.href = 'http://www.crevolutionrobotics.org';" class="dropbtn">Home</button>
+                </div>
+           
+                <div class="dropdown">  
+                <button onclick="myFunction()" class="dropbtn">Team</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="http://crevolutionrobotics.org/aboutus.html">About Us</a>
+                    <a href="http://crevolutionrobotics.org/history.html">History</a>
+                    <a href="http://crevolutionrobotics.org/subteams.html">Subteams</a>
+                    <a href="http://crevolutionrobotics.org/members.html">Members</a>
+                    <a href="http://crevolutionrobotics.org/mentors.html">Mentors</a>     
+                </div>
+                </div>
+            </div>     
+      </div>
+       
+<div id="container">
+    <div id="sidebar1">
+        <div id="studentLogin">
+            <div id="studentLoginHeader">Member Login</div>
+            <div id="studentLoginForm" class="contentArea">
+                <script>
+                    function passWord() {
+                    var testV = 1;
+                    var pass1 = prompt('Please Enter Your Password',' ');
+                    while (testV < 3) {
+                    if (!pass1) 
+                    history.go(-1);
+                    if (pass1.toLowerCase() == "incorrect") {
+                    alert('You Got it Right!');
+                    window.open('http://crevolutionrobotics.org/members.html');
+                    break;
+                    } 
+                    testV+=1;
+                    var pass1 = 
+                    prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+                    }
+                    if (pass1.toLowerCase()!="password" & testV ==3) 
+                    history.go(-1);
+                    return " ";
+                    } 
+                 </script>
+                 <FORM><input type="button" value="Access Student Inventory" onClick="passWord()"></FORM>                   
+            </div>
+        </div>
+    </div>
+
+    <div id="mainContent">
+        <div id="slideShow">
+            <div class="contentHeader">A FIRST Robotics Team!</div>
+            <div id="slideshowContent">
+                <div id="slideShowImages">
+                <a href="javascript:slidelink()"><img src="http://crevolutionrobotics.org/Pictures/Logos/FIRSTicon_RGB.jpg" id="slide" width="384" height="296" alt="FIRST logo"/></a>                   
+                    <script type="text/javascript">
+                        //variable that will increment through the images
+                        var step = 0
+                        var whichimage = 0
+                        function slideit() {
+                            //if browser does not support the image object, exit.
+                            if (!document.images)
+                                return
+                            document.getElementById('slide').src = slideimages[step].src
+                            whichimage = step
+                            if (step < 3)
+                                step++
+                            else
+                                step = 0
+                            //call function "slideit()" every 4.7 seconds
+                            setTimeout("slideit()", 4700)
+                        }
+                        function slidelink() {
+                            // The slidelink() function is used to change the image link depending on which image is shown at the time 
+                            // each if statement corrosponds to the different images
+                            if (whichimage == 0)
+                                window.location = "http://www.firstinspires.org"
+                            else if (whichimage == 1)
+                                window.location = "http://crevolutionrobotics.org/members.html"
+                            else if (whichimage == 2)
+                                window.location = "http://crevolutionrobotics.org/community.html"
+                            else if (whichimage == 3)
+                                winodw.location = "http://crevolutionrobotics.org/pictures.html"
+                        }
+                        slideit()
+                    </script>
+                 </div>  
+            </div>               
+        </div>
+        <div id="GameOfTheYear">
+            <div class="contentHeader">2016 FIRST STRONGHOLD!</div>
+            <div id="gameContent" class="contentArea">
+                <iframe style="float:left; padding:5px;" width="336" height="189" src="//www.youtube.com/embed/VqOKzoHJDjA" frameborder="0" allowfullscreen=""></iframe>
+
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FIRST STRONGHOLD is played by two alliances of three teams each. Alliances compete against each other
+                to breach their opponents’ defenses, known as outer works, and capture their tower. They score points by
+                crossing elements of their opponents’ outer works, scoring boulders in their opponents’ tower goals, and
+                surrounding and scaling their opponents’ tower itself.</p>
+            </div>
+
+        </div>       
+    </div>
+</div>         
+    </body>
+</html>
