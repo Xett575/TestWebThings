@@ -1,140 +1,56 @@
 /*
     css for main website thigns such as the body, main container, side bar, etc are lines 11-40
     css for the drop down menus are lines 45-86
-    
-    
-    
-    
-    
+
     */
 
+.Header {
+    text-align: center;
+    color: #B5B5B5;
+    background-color: #333;
+    font-size: 1.6em;
+    font-family: Calibri;
+}
+
 body {
-    background: url(http://crevolutionrobotics.org/Pictures/Themes/Default/Background.png);
+    background-color: #B5B5B5;
+    color: #333;
+    margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+    font-size: 100%;
+    font-family: Calibri;
 }
-#header {
-    width:980px;
-    height: 250px;
-    margin: 0px auto;
-    position: relative;
+
+a {
+   text-decoration: none; /* no underline */
+   color: #333;
 }
-#container {
-    background:  #808080;
-    width: 980px;
-    height: 750px;
-    margin: 0 auto;
-    border: 1px solid #000000;
-    text-align: left;
-    line-height: 120%;
-    font-size: 16px;
+
+#NavigationBar {
+    padding-bottom: 20px; /* makes the menu farther from bottom of the div*/
+    margin-bottom: 10px; /* makes the start of the blog farther form the beginning of the Updates div*/
 }
-#sidebar1 {
+
+#LinksId {
+    color: #FCC336;
+    font-size: 2em;
+}
+
+#Updates {
     float: left;
-    width: 240px;
-    background: #B5B5B5;
-    margin: 10px 0 10px 5px;
-    padding: 7px;
-    border: 2px solid #333;
-    position: relative;
-}
-#studentLoginHeader {
-    background-image:  url(http://crevolutionrobotics.org/Pictures/Themes/Default/SidebarBackground.png);
-    background-repeat: no-repeat;
-    height: 28px;
-    padding-left: 9px;
-    padding-top: 8px;
-    font-size: 20px;
-    color: #333;
-    font-weight: bold;
-    background-position: center;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-#mainContent {
-    margin: 12px 5px 10px 270px;
-    padding: 0 0px 0px;
-    color: #CCC;
-}
-.contentHeader {
-    background-image: url(http://crevolutionrobotics.org/Pictures/Themes/Default/ContentAreaBackground.png);
-    background-repeat: no-repeat;
-    border-radius: 3px;
-    height: 34px;
-    color: #333;
-    text-align: center;
-    padding-left: 9px;
-    padding-top: 14px;
-    font-size: 25px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.contentArea {
-    background-color: #333;
-}
-#slideShowContent {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #333;
-    color: #CCC;
-}
-#slide {
-    padding-left: 25%;
-    padding-right: 20%;
-    padding-bottom: 15px;
-    padding-top: 10px;
-    background-color: #333;
-    
-}
-#gameContent {
-    padding-top: 5px;
-    padding-bottom: 39px;
+    width: 60%;
+    height: 100%;
+    margin-left: 5%;
+    padding-right: 20px; /* The space between the blog posts and SideBar */
+    font-size: 1.2em;
+    word-wrap: break-word;
 }
 
-/*Below is the css for the drop dwon menu*/
-
-.dropbtn {
-  background-image: url(http://crevolutionrobotics.org/Pictures/Themes/Default/ButtonBackground2.png);
-  color: #333;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  border-radius: 7px;
-  width:  100px;
+#SideBar {
+    float: left;
+    width: 20%;
+    height: 100%;
+    margin-right: 5%;
+    margin-top: 
+    font-size: 1.2em;
 }
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #3e8e41;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #666;
-  color: #333;
-  width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  border-radius: 3px;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-
