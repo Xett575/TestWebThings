@@ -1,5 +1,5 @@
 /*
-    css for main website thigns such as the body, main container, side bar, etc are lines 11-40
+    css for main website things such as the body, main container, side bar, etc are lines 11-40
     css for the drop down menus are lines 45-86
 
     */
@@ -57,7 +57,7 @@ a:hover {
     height: 100%;
     margin-right: auto;
     margin-top: 20px;
-    font-size: 1em;
+    font-size: 1.1em;
     font-family: Calibri;
 }
 
