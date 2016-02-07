@@ -21,11 +21,12 @@ body {
     font-family: Calibri;
 }
 
+
 a {
    text-decoration: none; /* no underline */
    font-size: 1em;
    font-family: Calibri;
-   color: #333;
+   color: inherit;
 }
 
 a:hover {
@@ -54,7 +55,7 @@ a:hover {
     float: left;
     width: 22%;
     height: 100%;
-    margin-right: 5%;
+    margin-right: auto;
     margin-top: 20px;
     font-size: 1.2em;
     font-family: Calibri;
