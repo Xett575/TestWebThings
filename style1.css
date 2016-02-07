@@ -23,34 +23,39 @@ body {
 
 a {
    text-decoration: none; /* no underline */
-   color: #FCC336;
+   font-size: 1em;
+   font-family: Calibri;
+   color: #333;
+}
+
+a:hover {
+   color:  #FCC336;
+   font-size: 1em;
 }
 
 #NavigationBar {
     padding-bottom: 20px; /* makes the menu farther from bottom of the div*/
     margin-bottom: 10px; /* makes the start of the blog farther form the beginning of the Updates div*/
-}
-
-#LinksId {
-    color: #FCC336;
-    font-size: 2em;
+    font-family: Calibri;
 }
 
 #Updates {
     float: left;
     width: 60%;
     height: 100%;
-    margin-left: 5%;
-    padding-right: 20px; /* The space between the blog posts and SideBar */
+    margin-left: 8%;
+    padding-right: 15px; /* The space between the blog posts and SideBar */
     font-size: 1.2em;
+    font-family: Calibri;
     word-wrap: break-word;
 }
 
 #SideBar {
     float: left;
-    width: 20%;
+    width: 22%;
     height: 100%;
     margin-right: 5%;
-    margin-top: 
+    margin-top: 20px;
     font-size: 1.2em;
+    font-family: Calibri;
 }
