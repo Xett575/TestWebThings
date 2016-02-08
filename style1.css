@@ -67,5 +67,9 @@ a:hover {
 }
 
 table {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
+}
+
+.twitter-timeline {
+    margin-bottom: 35px;
 }
