@@ -55,6 +55,7 @@ a:hover {
     font-size: 1.2em;
     font-family: Calibri;
     word-wrap: break-word;
+    overflow: auto;
 }
 
 #Updates iframe {
