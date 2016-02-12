@@ -6,8 +6,8 @@
 
 .Header {
     text-align: center;
-    color: #333;
-    /*background-color: #333; */
+    color: #B5B5B5;
+    background-color: #333; 
     background-image: url(Pictures/background.png);
     font-size: 1.6em;
     font-family: Calibri;
