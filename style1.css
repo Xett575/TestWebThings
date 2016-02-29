@@ -78,21 +78,19 @@ a:hover {
 table {
     margin-bottom: 35px;
     margin-left: 10%;
-    
 }
 
 
-.Calendar .Week
- {
+.Calendar {
     border: 1px solid black;
     border-collapse: collapse;
 }
+
 
 .days {
     height:  2%;
     padding: 5px 5px 5px 5px;
-    border: 1px solid black;
-    border-collapse: collapse;
+    border-collapse: collapse:
 }
 
 .Week:nth-child(even){background-color: #f2f2f2}
