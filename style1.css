@@ -82,15 +82,18 @@ table {
 }
 
 
-table, th, td {
+.Calendar .Week
+ {
     border: 1px solid black;
 }
 
-td {
+.days {
     height:  2%;
     padding: 5px 5px 5px 5px;
+    border: 1px solid black;
 }
 
+.Week:nth-child(even){background-color: #f2f2f2}
 
 .twitter-timeline {
     margin-bottom: 35px;
