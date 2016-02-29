@@ -78,6 +78,12 @@ a:hover {
 table {
     margin-bottom: 35px;
     margin-left: 10%;
+    border-collapse: collapse;
+}
+
+
+table, th, td {
+    border: 1px solid black;
 }
 
 
